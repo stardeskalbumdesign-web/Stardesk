@@ -1,155 +1,1781 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="STARDESK — Album Design Company in Agartala, West Tripura. Premium wedding albums, pre-wedding designs, photo editing and video editing.">
-<title>STARDESK | Album Design</title>
-<style>
-:root{--bg:#09080d;--card:#14121a;--gold:#d9ad58;--gold2:#f4d58e;--text:#f8f5ef;--muted:#bdb7ad;--line:#2b2630}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-a{text-decoration:none;color:inherit}
-.container{width:min(1120px,92%);margin:auto}
-nav{position:sticky;top:0;z-index:10;background:rgba(9,8,13,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.navin{height:72px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:25px;font-weight:900;letter-spacing:3px;color:var(--gold2)}
-.logo span{font-size:11px;display:block;letter-spacing:2px;color:var(--muted);font-weight:500}
-.links{display:flex;gap:25px;font-size:14px;color:#ddd}
-.links a:hover{color:var(--gold2)}
-.btn{display:inline-block;padding:13px 20px;border-radius:30px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#17120b;font-weight:800;box-shadow:0 8px 30px rgba(217,173,88,.18)}
-.btn.alt{background:transparent;border:1px solid var(--gold);color:var(--gold2);box-shadow:none}
-.hero{min-height:720px;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 35%,#302315 0,#151017 35%,#09080d 70%)}
-.hero:before{content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(244,213,142,.18);border-radius:50%;box-shadow:0 0 120px rgba(217,173,88,.12) inset}
-.hero-content{position:relative;z-index:1;padding:90px 0}
-.badge{display:inline-block;border:1px solid rgba(244,213,142,.35);padding:7px 14px;border-radius:20px;color:var(--gold2);font-size:12px;letter-spacing:2px;text-transform:uppercase}
-h1{font-size:clamp(48px,9vw,92px);line-height:.95;margin:22px 0 18px;letter-spacing:5px}
-.hero h1 em{font-style:normal;color:var(--gold2)}
-.hero p{max-width:690px;margin:0 auto 30px;color:var(--muted);font-size:18px}
-.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-section{padding:90px 0}
-.section-head{text-align:center;margin-bottom:45px}
-.kicker{color:var(--gold2);text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:800}
-h2{font-size:38px;margin:8px 0}
-.section-head p{color:var(--muted);max-width:650px;margin:auto}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:linear-gradient(145deg,#18151d,#100e14);border:1px solid var(--line);border-radius:20px;padding:28px;transition:.25s}
-.card:hover{transform:translateY(-5px);border-color:#5c4725}
-.icon{font-size:34px;margin-bottom:12px}
-.card h3{margin-bottom:8px;color:var(--gold2)}
-.card p{color:var(--muted);font-size:14px}
-.portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.work{aspect-ratio:4/3;border-radius:16px;border:1px solid var(--line);display:flex;align-items:end;padding:20px;overflow:hidden;position:relative;background:
-linear-gradient(135deg,rgba(217,173,88,.28),transparent 45%),
-radial-gradient(circle at 75% 25%,#633d2c,#211723 40%,#0d0b10)}
-.work:nth-child(2){background:linear-gradient(135deg,rgba(244,213,142,.22),transparent 50%),radial-gradient(circle at 25% 25%,#7b4f62,#16121b 45%)}
-.work:nth-child(3){background:linear-gradient(135deg,rgba(217,173,88,.2),transparent 50%),radial-gradient(circle at 70% 60%,#284d52,#11151a 45%)}
-.work:nth-child(4){background:linear-gradient(135deg,rgba(244,213,142,.2),transparent 50%),radial-gradient(circle at 30% 60%,#5c2637,#120f15 45%)}
-.work:nth-child(5){background:linear-gradient(135deg,rgba(217,173,88,.2),transparent 50%),radial-gradient(circle at 70% 30%,#4b4a72,#101017 45%)}
-.work:nth-child(6){background:linear-gradient(135deg,rgba(244,213,142,.2),transparent 50%),radial-gradient(circle at 40% 30%,#72552f,#11100e 45%)}
-.work span{font-weight:800;font-size:18px;text-shadow:0 2px 12px #000}
-.about{background:#0e0c12}
-.aboutbox{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
-.about p{color:var(--muted);margin:15px 0}
-.features{display:grid;gap:12px}
-.feature{padding:17px;border:1px solid var(--line);border-radius:14px;background:#15131a}
-.feature b{color:var(--gold2)}
-.contact{background:linear-gradient(135deg,#1a140d,#0d0b10)}
-.contactbox{text-align:center;max-width:760px;margin:auto}
-.contactbox p{color:var(--muted);margin:12px auto 25px}
-footer{padding:30px 0;border-top:1px solid var(--line);color:#8e887f;text-align:center;font-size:13px}
-@media(max-width:800px){.links{display:none}.grid,.portfolio{grid-template-columns:1fr}.aboutbox{grid-template-columns:1fr}section{padding:65px 0}.hero{min-height:650px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>STARDESK — Premium Album Design & Video Editing Company</title>
+  <meta name="description" content="STARDESK is a premium album design and video editing company in Agartala, West Tripura, creating luxury wedding albums, pre-wedding designs, photo retouching and cinematic videos.">
+
+  <meta name="theme-color" content="#08070D">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --black: #08070d;
+      --black-2: #0d0c12;
+      --charcoal: #15141b;
+      --charcoal-2: #1c1a22;
+      --gold: #e7b84b;
+      --gold-light: #f5d57b;
+      --gold-dark: #a97920;
+      --white: #f5f2ea;
+      --muted: #aaa7a0;
+      --border: rgba(231,184,75,.24);
+      --glass: rgba(255,255,255,.045);
+      --shadow: 0 25px 70px rgba(0,0,0,.45);
+      --serif: "Cormorant Garamond", Georgia, serif;
+      --sans: "Inter", Arial, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--sans);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    body.modal-open {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    /* =========================
+       GOLD PARTICLES
+    ========================== */
+
+    .particles {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .particle {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: var(--gold);
+      opacity: .25;
+      box-shadow: 0 0 12px var(--gold);
+      animation: floatParticle linear infinite;
+    }
+
+    @keyframes floatParticle {
+      from {
+        transform: translateY(110vh) scale(.5);
+      }
+      to {
+        transform: translateY(-20vh) scale(1.2);
+      }
+    }
+
+    /* =========================
+       NAVBAR
+    ========================== */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      background: rgba(8,7,13,.72);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .navbar {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-star {
+      width: 37px;
+      height: 37px;
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      font-size: 24px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      box-shadow: 0 0 25px rgba(231,184,75,.12);
+    }
+
+    .brand-name {
+      font-family: var(--serif);
+      font-size: 25px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: var(--gold-light);
+      line-height: 1;
+    }
+
+    .brand-subtitle {
+      display: block;
+      font-size: 8px;
+      letter-spacing: 3px;
+      color: #aaa;
+      margin-top: 3px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    nav a {
+      position: relative;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      color: #d7d4cc;
+      padding: 29px 0;
+      transition: color .3s ease;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width .3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--gold-light);
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+    .quote-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      border-radius: 50px;
+      border: 1px solid var(--gold);
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      color: #17120a;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: .3s ease;
+      box-shadow: 0 8px 30px rgba(231,184,75,.12);
+    }
+
+    .quote-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 35px rgba(231,184,75,.3);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--gold);
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 22px;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: 720px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-top: 78px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 75% 40%, rgba(151,108,32,.13), transparent 28%),
+        radial-gradient(circle at 20% 60%, rgba(231,184,75,.05), transparent 25%),
+        var(--black);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      right: -250px;
+      top: 100px;
+      border-radius: 50%;
+      background: rgba(231,184,75,.08);
+      filter: blur(100px);
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(72px, 9vw, 126px);
+      line-height: .78;
+      font-weight: 600;
+      letter-spacing: 7px;
+      color: var(--gold-light);
+      text-shadow: 0 10px 45px rgba(231,184,75,.08);
+    }
+
+    .hero-subtitle {
+      margin-top: 20px;
+      font-size: clamp(17px, 2vw, 25px);
+      font-family: var(--serif);
+      letter-spacing: 5px;
+      color: var(--white);
+    }
+
+    .hero-description {
+      max-width: 570px;
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 22px;
+      line-height: 1.9;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 13px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 24px;
+      border-radius: 5px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      transition: .3s ease;
+      cursor: pointer;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      color: #151008;
+      border: 1px solid var(--gold);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(231,184,75,.22);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--border);
+      color: var(--gold-light);
+      background: rgba(255,255,255,.02);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      background: rgba(231,184,75,.07);
+      transform: translateY(-3px);
+    }
+
+    .hero-image-wrap {
+      position: relative;
+      min-height: 560px;
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      border-radius: 30px 4px 30px 4px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(231,184,75,.15);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(.88) contrast(1.04);
+      transform: scale(1.02);
+    }
+
+    .hero-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, var(--black) 0%, rgba(8,7,13,.2) 40%, rgba(8,7,13,.02) 100%),
+        linear-gradient(0deg, rgba(8,7,13,.35), transparent 45%);
+    }
+
+    .hero-frame {
+      position: absolute;
+      z-index: 3;
+      inset: 18px -18px -18px 18px;
+      border: 1px solid rgba(231,184,75,.3);
+      border-radius: 30px 4px 30px 4px;
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      position: absolute;
+      z-index: 5;
+      right: -25px;
+      bottom: 35px;
+      width: 145px;
+      height: 145px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      background: rgba(8,7,13,.78);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(231,184,75,.4);
+      color: var(--gold-light);
+      font-family: var(--serif);
+      font-size: 17px;
+      line-height: 1.15;
+      box-shadow: 0 15px 50px rgba(0,0,0,.4);
+    }
+
+    .hero-badge span {
+      display: block;
+      font-family: var(--sans);
+      font-size: 7px;
+      letter-spacing: 2px;
+      margin-top: 6px;
+      color: var(--muted);
+    }
+
+    /* =========================
+       SECTIONS
+    ========================== */
+
+    section {
+      position: relative;
+      z-index: 1;
+      padding: 105px 0;
+    }
+
+    .section-head {
+      max-width: 720px;
+      margin-bottom: 50px;
+    }
+
+    .section-label {
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      margin-bottom: 9px;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(42px, 5vw, 66px);
+      font-weight: 500;
+      line-height: .95;
+      letter-spacing: 1px;
+      color: var(--white);
+    }
+
+    .section-title span {
+      color: var(--gold);
+    }
+
+    .section-description {
+      color: var(--muted);
+      margin-top: 17px;
+      font-size: 13px;
+    }
+
+    /* =========================
+       SERVICES
+    ========================== */
+
+    .services {
+      background:
+        linear-gradient(180deg, var(--black), var(--black-2));
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      position: relative;
+      min-height: 265px;
+      padding: 30px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.018));
+      overflow: hidden;
+      transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      width: 130px;
+      height: 130px;
+      right: -60px;
+      top: -60px;
+      background: var(--gold);
+      opacity: 0;
+      filter: blur(60px);
+      transition: opacity .35s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(231,184,75,.65);
+      box-shadow: 0 20px 50px rgba(0,0,0,.3), 0 0 30px rgba(231,184,75,.06);
+    }
+
+    .service-card:hover::before {
+      opacity: .18;
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border);
+      color: var(--gold);
+      border-radius: 12px;
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+
+    .service-card h3 {
+      font-family: var(--serif);
+      font-size: 25px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--gold-light);
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    /* =========================
+       PORTFOLIO
+    ========================== */
+
+    .portfolio {
+      background: #0b0a10;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .portfolio-item {
+      position: relative;
+      height: 360px;
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,.08);
+      background: #141219;
+    }
+
+    .portfolio-item.large {
+      height: 440px;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .7s cubic-bezier(.2,.7,.2,1);
+    }
+
+    .portfolio-item::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(0,0,0,.88), transparent 65%);
+      transition: .35s ease;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .portfolio-item:hover::after {
+      background: linear-gradient(0deg, rgba(0,0,0,.95), rgba(0,0,0,.08) 75%);
+    }
+
+    .portfolio-caption {
+      position: absolute;
+      z-index: 2;
+      left: 25px;
+      bottom: 23px;
+      transform: translateY(8px);
+      transition: .35s ease;
+    }
+
+    .portfolio-caption small {
+      color: var(--gold);
+      font-size: 8px;
+      letter-spacing: 2px;
+    }
+
+    .portfolio-caption h3 {
+      margin-top: 4px;
+      font-family: var(--serif);
+      font-size: 27px;
+      color: white;
+    }
+
+    .portfolio-item:hover .portfolio-caption {
+      transform: translateY(0);
+    }
+
+    .portfolio-btn {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about {
+      background:
+        radial-gradient(circle at 10% 50%, rgba(231,184,75,.055), transparent 25%),
+        var(--black);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-text {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 2;
+      margin: 20px 0 28px;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 20px;
+    }
+
+    .feature {
+      display: flex;
+      gap: 15px;
+      padding: 17px;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+
+    .feature-check {
+      flex: 0 0 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      border: 1px solid var(--border);
+      font-size: 13px;
+    }
+
+    .feature h4 {
+      font-family: var(--serif);
+      color: var(--gold-light);
+      font-size: 21px;
+      font-weight: 600;
+    }
+
+    .feature p {
+      color: var(--muted);
+      font-size: 11px;
+      margin-top: 2px;
+    }
+
+    .about-card {
+      min-height: 450px;
+      border-radius: 25px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      position: relative;
+      box-shadow: var(--shadow);
+    }
+
+    .about-card img {
+      width: 100%;
+      height: 100%;
+      min-height: 450px;
+      object-fit: cover;
+    }
+
+    .about-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(8,7,13,.75), transparent 60%);
+    }
+
+    .about-card-label {
+      position: absolute;
+      z-index: 2;
+      left: 30px;
+      bottom: 27px;
+      color: white;
+    }
+
+    .about-card-label strong {
+      font-family: var(--serif);
+      font-size: 31px;
+      color: var(--gold-light);
+    }
+
+    .about-card-label small {
+      display: block;
+      color: var(--muted);
+      font-size: 9px;
+      letter-spacing: 2px;
+    }
+
+    /* =========================
+       CTA
+    ========================== */
+
+    .cta {
+      padding: 90px 0;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(231,184,75,.11), transparent 35%),
+        linear-gradient(135deg, #151219, #09080d);
+    }
+
+    .cta-box {
+      text-align: center;
+      padding: 65px 30px;
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      background: rgba(255,255,255,.025);
+      box-shadow: var(--shadow);
+    }
+
+    .cta-box h2 {
+      font-family: var(--serif);
+      font-size: clamp(43px, 6vw, 70px);
+      line-height: 1;
+      font-weight: 500;
+    }
+
+    .cta-box p {
+      color: var(--muted);
+      max-width: 600px;
+      margin: 18px auto 28px;
+      font-size: 13px;
+    }
+
+    .contact-info {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      color: #c9c6bd;
+      font-size: 11px;
+    }
+
+    .contact-info span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-info b {
+      color: var(--gold);
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: #05050a;
+      border-top: 1px solid rgba(231,184,75,.12);
+      padding: 65px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 45px;
+    }
+
+    .footer-brand p {
+      color: var(--muted);
+      font-size: 11px;
+      max-width: 300px;
+      margin-top: 15px;
+      line-height: 1.8;
+    }
+
+    .footer-title {
+      color: var(--gold);
+      font-size: 10px;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 9px;
+    }
+
+    .footer-links a {
+      color: #aaa7a0;
+      font-size: 11px;
+      transition: .25s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-light);
+      transform: translateX(3px);
+    }
+
+    .socials {
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap;
+    }
+
+    .socials a {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--gold);
+      font-size: 11px;
+      transition: .3s ease;
+    }
+
+    .socials a:hover {
+      background: var(--gold);
+      color: #100e09;
+      transform: translateY(-3px);
+    }
+
+    .copyright {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,.06);
+      text-align: center;
+      color: #66636b;
+      font-size: 9px;
+      letter-spacing: 1px;
+    }
+
+    /* =========================
+       LIGHTBOX
+    ========================== */
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      display: none;
+      place-items: center;
+      padding: 30px;
+      background: rgba(0,0,0,.92);
+      backdrop-filter: blur(15px);
+    }
+
+    .lightbox.active {
+      display: grid;
+    }
+
+    .lightbox img {
+      max-width: min(1100px, 95vw);
+      max-height: 85vh;
+      object-fit: contain;
+      border: 1px solid var(--border);
+      box-shadow: 0 30px 100px #000;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 25px;
+      right: 30px;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      color: var(--gold);
+      background: rgba(255,255,255,.05);
+      cursor: pointer;
+      font-size: 22px;
+    }
+
+    /* =========================
+       REVEAL ANIMATION
+    ========================== */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 950px) {
+
+      nav ul {
+        position: fixed;
+        top: 78px;
+        right: -100%;
+        width: 280px;
+        min-height: calc(100vh - 78px);
+        padding: 35px 25px;
+        flex-direction: column;
+        align-items: flex-start;
+        background: rgba(8,7,13,.97);
+        backdrop-filter: blur(20px);
+        border-left: 1px solid var(--border);
+        transition: right .35s ease;
+      }
+
+      nav ul.open {
+        right: 0;
+      }
+
+      nav a {
+        padding: 8px 0;
+      }
+
+      nav a::after {
+        bottom: 0;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .desktop-quote {
+        display: none;
+      }
+
+      .hero-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 130px;
+      }
+
+      .hero-image-wrap {
+        min-height: 500px;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .navbar {
+        height: 68px;
+      }
+
+      nav ul {
+        top: 68px;
+        min-height: calc(100vh - 68px);
+      }
+
+      .brand-name {
+        font-size: 21px;
+      }
+
+      .brand-subtitle {
+        font-size: 7px;
+      }
+
+      .brand-star {
+        width: 32px;
+        height: 32px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 115px;
+        padding-bottom: 70px;
+      }
+
+      .hero h1 {
+        font-size: 75px;
+      }
+
+      .hero-subtitle {
+        font-size: 17px;
+        letter-spacing: 3px;
+      }
+
+      .hero-image-wrap {
+        min-height: 390px;
+      }
+
+      .hero-frame {
+        inset: 10px -8px -10px 8px;
+      }
+
+      .hero-badge {
+        width: 110px;
+        height: 110px;
+        right: -8px;
+        bottom: 20px;
+        font-size: 14px;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      .section-head {
+        margin-bottom: 32px;
+      }
+
+      .service-grid,
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .portfolio-item,
+      .portfolio-item.large {
+        height: 390px;
+      }
+
+      .about-grid {
+        gap: 40px;
+      }
+
+      .about-card,
+      .about-card img {
+        min-height: 380px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .contact-info {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .cta-box {
+        padding: 50px 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<nav>
-  <div class="container navin">
-    <a class="logo" href="#home">STARDESK<span>ALBUM DESIGN</span></a>
-    <div class="links">
-      <a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#about">About</a><a href="#contact">Contact</a>
-    </div>
-    <a class="btn" href="#contact">Get a Quote</a>
+  <!-- GOLD PARTICLES -->
+  <div class="particles" aria-hidden="true">
+    <span class="particle" style="left:8%;animation-duration:17s"></span>
+    <span class="particle" style="left:18%;animation-duration:21s;animation-delay:2s"></span>
+    <span class="particle" style="left:31%;animation-duration:15s;animation-delay:5s"></span>
+    <span class="particle" style="left:44%;animation-duration:24s;animation-delay:1s"></span>
+    <span class="particle" style="left:57%;animation-duration:18s;animation-delay:4s"></span>
+    <span class="particle" style="left:70%;animation-duration:22s;animation-delay:7s"></span>
+    <span class="particle" style="left:82%;animation-duration:16s;animation-delay:3s"></span>
+    <span class="particle" style="left:93%;animation-duration:25s;animation-delay:6s"></span>
   </div>
-</nav>
 
-<main>
-<section class="hero" id="home">
-  <div class="container hero-content">
-    <div class="badge">Premium Creative Studio</div>
-    <h1>STAR<em>DESK</em></h1>
-    <p>Album Designing Company — creating premium wedding albums, pre-wedding designs, photo edits and cinematic videos that make your memories unforgettable.</p>
-    <div class="actions">
-      <a class="btn" href="#portfolio">View Our Work</a>
-      <a class="btn alt" href="#contact">Contact STARDESK</a>
+  <!-- HEADER -->
+  <header>
+    <div class="container navbar">
+
+      <a href="#home" class="brand" aria-label="STARDESK Home">
+        <span class="brand-star">✦</span>
+        <span>
+          <span class="brand-name">STARDESK</span>
+          <span class="brand-subtitle">ALBUM DESIGN</span>
+        </span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul id="navMenu">
+          <li><a href="#home" class="active">HOME</a></li>
+          <li><a href="#services">SERVICES</a></li>
+          <li><a href="#portfolio">PORTFOLIO</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contact" class="quote-btn desktop-quote">
+        GET A QUOTE <span>→</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+        ☰
+      </button>
+
     </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+
+        <div class="hero-content reveal">
+          <div class="eyebrow">PREMIUM CREATIVE STUDIO</div>
+
+          <h1>STARDESK</h1>
+
+          <div class="hero-subtitle">
+            ALBUM DESIGN COMPANY
+          </div>
+
+          <p class="hero-description">
+            Creating premium wedding albums, pre-wedding designs,
+            photo edits and cinematic videos that make your memories
+            unforgettable.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#portfolio" class="btn btn-gold">
+              VIEW OUR WORK
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+              CONTACT STARDESK
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-image-wrap reveal">
+
+          <div class="hero-image">
+            <img
+              src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1400&q=85"
+              alt="Elegant Indian wedding couple"
+              fetchpriority="high">
+          </div>
+
+          <div class="hero-frame"></div>
+
+          <div class="hero-badge">
+            STARDESK
+            <span>EST. 2026 · AGARTALA</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+      <div class="container">
+
+        <div class="section-head reveal">
+          <div class="section-label">WHAT WE DO</div>
+          <h2 class="section-title">
+            CREATIVE <span>SERVICES</span>
+          </h2>
+          <p class="section-description">
+            Professional design and editing for photographers,
+            studios, couples and families.
+          </p>
+        </div>
+
+        <div class="service-grid">
+
+          <article class="service-card reveal">
+            <div class="service-icon">✦</div>
+            <h3>Wedding Album Design</h3>
+            <p>
+              Luxury Bengali and Indian wedding album layouts,
+              DM pages, covers and premium masking designs.
+            </p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">♡</div>
+            <h3>Pre-Wedding Albums</h3>
+            <p>
+              Romantic, cinematic and modern pre-wedding album
+              pages designed around your photos.
+            </p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">▶</div>
+            <h3>Video Editing</h3>
+            <p>
+              Wedding, pre-wedding, reels and cinematic highlight
+              videos with polished professional editing.
+            </p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">◈</div>
+            <h3>Photo Retouching</h3>
+            <p>
+              Professional skin retouching, color correction,
+              restoration and creative photo enhancement.
+            </p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">▱</div>
+            <h3>Custom Templates</h3>
+            <p>
+              Photoshop manually designed album templates tailored
+              to your studio's workflow and visual style.
+            </p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">✧</div>
+            <h3>Creative Design</h3>
+            <p>
+              Premium covers, social media creatives, promotional
+              designs and branded visual content.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+
+        <div class="section-head reveal">
+          <div class="section-label">SELECTED WORK</div>
+          <h2 class="section-title">
+            OUR DESIGN <span>STYLE</span>
+          </h2>
+          <p class="section-description">
+            A glimpse of the premium album designs we create.
+          </p>
+        </div>
+
+        <div class="portfolio-grid">
+
+          <div class="portfolio-item large reveal"
+               data-title="Royal Wedding"
+               data-image="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=85">
+            <img
+              loading="lazy"
+              src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80"
+              alt="Royal wedding photography">
+            <div class="portfolio-caption">
+              <small>01 / WEDDING</small>
+              <h3>Royal Wedding</h3>
+            </div>
+          </div>
+
+          <div class="portfolio-item reveal"
+               data-title="Pre-Wedding"
+               data-image="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1600&q=85">
+            <img
+              loading="lazy"
+              src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=80"
+              alt="Pre wedding couple photography">
+            <div class="portfolio-caption">
+              <small>02 / COUPLE</small>
+              <h3>Pre-Wedding</h3>
+            </div>
+          </div>
+
+          <div class="portfolio-item reveal"
+               data-title="Luxury Album"
+               data-image="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1600&q=85">
+            <img
+              loading="lazy"
+              src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1000&q=80"
+              alt="Luxury wedding album">
+            <div class="portfolio-caption">
+              <small>03 / ALBUM</small>
+              <h3>Luxury Album</h3>
+            </div>
+          </div>
+
+          <div class="portfolio-item reveal"
+               data-title="Bengali Wedding"
+               data-image="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1600&q=85">
+            <img
+              loading="lazy"
+              src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1000&q=80"
+              alt="Traditional Indian wedding">
+            <div class="portfolio-caption">
+              <small>04 / TRADITIONAL</small>
+              <h3>Bengali Wedding</h3>
+            </div>
+          </div>
+
+          <div class="portfolio-item reveal"
+               data-title="Engagement"
+               data-image="https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?auto=format&fit=crop&w=1600&q=85">
+            <img
+              loading="lazy"
+              src="https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?auto=format&fit=crop&w=1000&q=80"
+              alt="Engagement couple">
+            <div class="portfolio-caption">
+              <small>05 / CEREMONY</small>
+              <h3>Engagement</h3>
+            </div>
+          </div>
+
+          <div class="portfolio-item large reveal"
+               data-title="Rice Ceremony"
+               data-image="https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=1600&q=85">
+            <img
+              loading="lazy"
+              src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=1000&q=80"
+              alt="Indian family ceremony">
+            <div class="portfolio-caption">
+              <small>06 / FAMILY</small>
+              <h3>Rice Ceremony</h3>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="portfolio-btn reveal">
+          <a href="#contact" class="btn btn-outline">
+            VIEW FULL PORTFOLIO →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="container about-grid">
+
+        <div class="reveal">
+          <div class="section-label">ABOUT STARDESK</div>
+
+          <h2 class="section-title">
+            STORIES MADE <span>TIMELESS.</span>
+          </h2>
+
+          <p class="about-text">
+            STARDESK is a creative album design company focused on
+            elegant, emotional and premium visual storytelling.
+            We combine modern masking, cinematic composition,
+            luxury typography and careful retouching to create
+            designs that photographers can proudly deliver to
+            their clients.
+          </p>
+
+          <a href="#contact" class="btn btn-gold">
+            START A PROJECT
+          </a>
+        </div>
+
+        <div class="feature-list reveal">
+
+          <div class="feature">
+            <div class="feature-check">✓</div>
+            <div>
+              <h4>Print-ready designs</h4>
+              <p>
+                High-resolution album layouts prepared for
+                professional printing.
+              </p>
+            </div>
+          </div>
+
+          <div class="feature">
+            <div class="feature-check">✓</div>
+            <div>
+              <h4>Fast & creative workflow</h4>
+              <p>
+                Designed for photographers and studios who need
+                reliable turnaround.
+              </p>
+            </div>
+          </div>
+
+          <div class="feature">
+            <div class="feature-check">✓</div>
+            <div>
+              <h4>Custom style</h4>
+              <p>
+                Tell us your theme, colors and photo count —
+                we build around your vision.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section class="cta" id="contact">
+      <div class="container">
+
+        <div class="cta-box reveal">
+
+          <div class="section-label">
+            LET'S CREATE SOMETHING BEAUTIFUL
+          </div>
+
+          <h2>
+            HAVE A PROJECT<br>
+            <span style="color:var(--gold)">IN MIND?</span>
+          </h2>
+
+          <p>
+            Send your album requirements and get a custom quote
+            from STARDESK.
+          </p>
+
+          <div class="hero-buttons" style="justify-content:center">
+
+            <!-- Replace email address with your actual business email -->
+            <a
+              href="mailto:stardesk@example.com?subject=STARDESK%20Project%20Enquiry"
+              class="btn btn-gold">
+              ✉ EMAIL US
+            </a>
+
+            <!-- Replace phone number with your WhatsApp number -->
+            <a
+              href="https://wa.me/910000000000"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-outline">
+              ◉ WHATSAPP
+            </a>
+
+          </div>
+
+          <div class="contact-info">
+            <span><b>⌖</b> Agartala, West Tripura • India</span>
+            <span><b>✦</b> Album Design Company</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="#home" class="brand">
+            <span class="brand-star">✦</span>
+            <span>
+              <span class="brand-name">STARDESK</span>
+              <span class="brand-subtitle">ALBUM DESIGN</span>
+            </span>
+          </a>
+
+          <p>
+            Premium wedding album design, creative photo editing
+            and cinematic video editing for photographers,
+            studios, couples and families.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-title">QUICK LINKS</div>
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-title">SERVICES</div>
+          <div class="footer-links">
+            <a href="#services">Wedding Albums</a>
+            <a href="#services">Pre-Wedding</a>
+            <a href="#services">Video Editing</a>
+            <a href="#services">Photo Retouching</a>
+            <a href="#services">Custom Templates</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-title">CONNECT</div>
+
+          <div class="socials">
+
+            <a href="#" aria-label="Facebook">f</a>
+
+            <a href="#" aria-label="Instagram">◎</a>
+
+            <a href="#" aria-label="YouTube">▶</a>
+
+            <a
+              href="https://wa.me/910000000000"
+              target="_blank"
+              rel="noopener"
+              aria-label="WhatsApp">◉</a>
+
+          </div>
+
+          <div class="footer-links" style="margin-top:18px">
+            <a href="mailto:stardesk@example.com">
+              stardesk@example.com
+            </a>
+            <a href="#contact">
+              Agartala, West Tripura
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        © 2026 STARDESK · Album Design Company · All Rights Reserved
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div
+    class="lightbox"
+    id="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Portfolio image viewer">
+
+    <button
+      class="lightbox-close"
+      id="lightboxClose"
+      aria-label="Close image viewer">
+      ×
+    </button>
+
+    <img id="lightboxImage" src="" alt="Portfolio preview">
   </div>
-</section>
 
-<section id="services">
-  <div class="container">
-    <div class="section-head"><div class="kicker">What We Do</div><h2>Creative Services</h2><p>Professional design and editing for photographers, studios, couples and families.</p></div>
-    <div class="grid">
-      <div class="card"><div class="icon">✦</div><h3>Wedding Album Design</h3><p>Luxury Bengali and Indian wedding album layouts, DM pages, covers and premium masking designs.</p></div>
-      <div class="card"><div class="icon">♡</div><h3>Pre-Wedding Albums</h3><p>Romantic, cinematic and modern pre-wedding album pages designed around your photos.</p></div>
-      <div class="card"><div class="icon">▶</div><h3>Video Editing</h3><p>Wedding, pre-wedding, reels and cinematic highlight videos with polished professional editing.</p></div>
-      <div class="card"><div class="icon">✧</div><h3>Photo Retouching</h3><p>Professional skin retouching, color correction, restoration and creative photo enhancement.</p></div>
-      <div class="card"><div class="icon">▣</div><h3>Custom Templates</h3><p>Photoshop manually album templates tailored to your studio's workflow and style.</p></div>
-      <div class="card"><div class="icon">★</div><h3>Creative Design</h3><p>Premium covers, social media creatives, promotional designs and branded visual content.</p></div>
-    </div>
-  </div>
-</section>
+  <script>
+    /* =========================
+       MOBILE MENU
+    ========================== */
 
-<section id="portfolio" class="about">
-  <div class="container">
-    <div class="section-head"><div class="kicker">Selected Work</div><h2>Our Design Style</h2><p>Replace these sample cards with your real album images whenever you are ready.</p></div>
-    <div class="portfolio">
-      <div class="work"><span>Royal Wedding</span></div>
-      <div class="work"><span>Pre-Wedding</span></div>
-      <div class="work"><span>Luxury Album</span></div>
-      <div class="work"><span>Bengali Wedding</span></div>
-      <div class="work"><span>Engagement</span></div>
-      <div class="work"><span>Rice Ceremony</span></div>
-    </div>
-  </div>
-</section>
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
 
-<section id="about">
-  <div class="container aboutbox">
-    <div>
-      <div class="kicker">About STARDESK</div>
-      <h2>Turning photographs into beautiful stories.</h2>
-      <p>STARDESK is a creative album design company focused on elegant, emotional and premium visual storytelling.</p>
-      <p>From a single photo to a complete wedding album, we combine modern masking, cinematic composition, luxury typography and careful retouching to create designs that photographers can proudly deliver to their clients.</p>
-      <a class="btn" href="#contact">Start a Project</a>
-    </div>
-    <div class="features">
-      <div class="feature"><b>✓ Print-ready designs</b><br>High-resolution album layouts prepared for professional printing.</div>
-      <div class="feature"><b>✓ Fast & creative workflow</b><br>Designed for photographers and studios who need reliable turnaround.</div>
-      <div class="feature"><b>✓ Custom style</b><br>Tell us your theme, colors and photo count — we build around your vision.</div>
-    </div>
-  </div>
-</section>
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("open");
 
-<section class="contact" id="contact">
-  <div class="container contactbox">
-    <div class="kicker">Let's Create</div>
-    <h2>Have a project in mind?</h2>
-    <p>Send your album and get a custom quote from STARDESK.</p>
-    <div class="actions">
-      <!-- Replace the email below with your real business email -->
-      <a class="btn" href="mailto:stardeskalbumdesign@gmail.com?subject=STARDESK%20Project%20Enquiry">Email Us</a>
-      <!-- Replace the number below with your WhatsApp number, including country code -->
-      <a class="btn alt" href="https://wa.me/6009295378" target="_blank" rel="noopener">WhatsApp</a>
-    </div>
-    <p style="margin-top:22px">Agartala, West Tripura · India</p>
-  </div>
-</section>
-</main>
+      const expanded =
+        menuToggle.getAttribute("aria-expanded") === "true";
 
-<footer>
-  © 2026 STARDESK · Album Design Company · All Rights Reserved
-</footer>
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(!expanded)
+      );
+    });
+
+    document.querySelectorAll("#navMenu a").forEach(link => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("open");
+      });
+    });
+
+
+    /* =========================
+       ACTIVE NAVIGATION
+    ========================== */
+
+    const sections = document.querySelectorAll("main section[id]");
+    const navLinks = document.querySelectorAll("nav a");
+
+    const navObserver = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+
+            navLinks.forEach(link => {
+              link.classList.remove("active");
+
+              if (
+                link.getAttribute("href") ===
+                "#" + entry.target.id
+              ) {
+                link.classList.add("active");
+              }
+            });
+
+          }
+        });
+      },
+      {
+        rootMargin: "-35% 0px -55% 0px"
+      }
+    );
+
+    sections.forEach(section => navObserver.observe(section));
+
+
+    /* =========================
+       REVEAL ANIMATIONS
+    ========================== */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+    const revealObserver =
+      new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              revealObserver.unobserve(entry.target);
+            }
+
+          });
+        },
+        {
+          threshold: .12
+        }
+      );
+
+    revealElements.forEach(element => {
+      revealObserver.observe(element);
+    });
+
+
+    /* =========================
+       PORTFOLIO LIGHTBOX
+    ========================== */
+
+    const lightbox =
+      document.getElementById("lightbox");
+
+    const lightboxImage =
+      document.getElementById("lightboxImage");
+
+    const lightboxClose =
+      document.getElementById("lightboxClose");
+
+    document.querySelectorAll(".portfolio-item")
+      .forEach(item => {
+
+        item.addEventListener("click", () => {
+
+          const image =
+            item.dataset.image;
+
+          const title =
+            item.dataset.title;
+
+          lightboxImage.src = image;
+          lightboxImage.alt = title;
+
+          lightbox.classList.add("active");
+          document.body.classList.add("modal-open");
+
+        });
+
+      });
+
+    function closeLightbox() {
+      lightbox.classList.remove("active");
+      document.body.classList.remove("modal-open");
+
+      setTimeout(() => {
+        lightboxImage.src = "";
+      }, 250);
+    }
+
+    lightboxClose.addEventListener(
+      "click",
+      closeLightbox
+    );
+
+    lightbox.addEventListener(
+      "click",
+      event => {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      }
+    );
+
+    document.addEventListener(
+      "keydown",
+      event => {
+        if (event.key === "Escape") {
+          closeLightbox();
+        }
+      }
+    );
+
+
+    /* =========================
+       HEADER SCROLL EFFECT
+    ========================== */
+
+    const header =
+      document.querySelector("header");
+
+    window.addEventListener(
+      "scroll",
+      () => {
+
+        if (window.scrollY > 30) {
+          header.style.background =
+            "rgba(8,7,13,.92)";
+        } else {
+          header.style.background =
+            "rgba(8,7,13,.72)";
+        }
+
+      },
+      { passive: true }
+    );
+  </script>
+
 </body>
 </html>
