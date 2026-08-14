@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="STARDESK — Album Design Company in Agartala, West Tripura. Premium wedding albums, pre-wedding designs, photo editing and video editing.">
+<title>STARDESK | Album Design</title>
+<style>
+:root{--bg:#09080d;--card:#14121a;--gold:#d9ad58;--gold2:#f4d58e;--text:#f8f5ef;--muted:#bdb7ad;--line:#2b2630}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:10;background:rgba(9,8,13,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.navin{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:25px;font-weight:900;letter-spacing:3px;color:var(--gold2)}
+.logo span{font-size:11px;display:block;letter-spacing:2px;color:var(--muted);font-weight:500}
+.links{display:flex;gap:25px;font-size:14px;color:#ddd}
+.links a:hover{color:var(--gold2)}
+.btn{display:inline-block;padding:13px 20px;border-radius:30px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#17120b;font-weight:800;box-shadow:0 8px 30px rgba(217,173,88,.18)}
+.btn.alt{background:transparent;border:1px solid var(--gold);color:var(--gold2);box-shadow:none}
+.hero{min-height:720px;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 35%,#302315 0,#151017 35%,#09080d 70%)}
+.hero:before{content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(244,213,142,.18);border-radius:50%;box-shadow:0 0 120px rgba(217,173,88,.12) inset}
+.hero-content{position:relative;z-index:1;padding:90px 0}
+.badge{display:inline-block;border:1px solid rgba(244,213,142,.35);padding:7px 14px;border-radius:20px;color:var(--gold2);font-size:12px;letter-spacing:2px;text-transform:uppercase}
+h1{font-size:clamp(48px,9vw,92px);line-height:.95;margin:22px 0 18px;letter-spacing:5px}
+.hero h1 em{font-style:normal;color:var(--gold2)}
+.hero p{max-width:690px;margin:0 auto 30px;color:var(--muted);font-size:18px}
+.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+section{padding:90px 0}
+.section-head{text-align:center;margin-bottom:45px}
+.kicker{color:var(--gold2);text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:800}
+h2{font-size:38px;margin:8px 0}
+.section-head p{color:var(--muted);max-width:650px;margin:auto}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:linear-gradient(145deg,#18151d,#100e14);border:1px solid var(--line);border-radius:20px;padding:28px;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:#5c4725}
+.icon{font-size:34px;margin-bottom:12px}
+.card h3{margin-bottom:8px;color:var(--gold2)}
+.card p{color:var(--muted);font-size:14px}
+.portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.work{aspect-ratio:4/3;border-radius:16px;border:1px solid var(--line);display:flex;align-items:end;padding:20px;overflow:hidden;position:relative;background:
+linear-gradient(135deg,rgba(217,173,88,.28),transparent 45%),
+radial-gradient(circle at 75% 25%,#633d2c,#211723 40%,#0d0b10)}
+.work:nth-child(2){background:linear-gradient(135deg,rgba(244,213,142,.22),transparent 50%),radial-gradient(circle at 25% 25%,#7b4f62,#16121b 45%)}
+.work:nth-child(3){background:linear-gradient(135deg,rgba(217,173,88,.2),transparent 50%),radial-gradient(circle at 70% 60%,#284d52,#11151a 45%)}
+.work:nth-child(4){background:linear-gradient(135deg,rgba(244,213,142,.2),transparent 50%),radial-gradient(circle at 30% 60%,#5c2637,#120f15 45%)}
+.work:nth-child(5){background:linear-gradient(135deg,rgba(217,173,88,.2),transparent 50%),radial-gradient(circle at 70% 30%,#4b4a72,#101017 45%)}
+.work:nth-child(6){background:linear-gradient(135deg,rgba(244,213,142,.2),transparent 50%),radial-gradient(circle at 40% 30%,#72552f,#11100e 45%)}
+.work span{font-weight:800;font-size:18px;text-shadow:0 2px 12px #000}
+.about{background:#0e0c12}
+.aboutbox{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.about p{color:var(--muted);margin:15px 0}
+.features{display:grid;gap:12px}
+.feature{padding:17px;border:1px solid var(--line);border-radius:14px;background:#15131a}
+.feature b{color:var(--gold2)}
+.contact{background:linear-gradient(135deg,#1a140d,#0d0b10)}
+.contactbox{text-align:center;max-width:760px;margin:auto}
+.contactbox p{color:var(--muted);margin:12px auto 25px}
+footer{padding:30px 0;border-top:1px solid var(--line);color:#8e887f;text-align:center;font-size:13px}
+@media(max-width:800px){.links{display:none}.grid,.portfolio{grid-template-columns:1fr}.aboutbox{grid-template-columns:1fr}section{padding:65px 0}.hero{min-height:650px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container navin">
+    <a class="logo" href="#home">STARDESK<span>ALBUM DESIGN</span></a>
+    <div class="links">
+      <a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </div>
+    <a class="btn" href="#contact">Get a Quote</a>
+  </div>
+</nav>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <div class="badge">Premium Creative Studio</div>
+    <h1>STAR<em>DESK</em></h1>
+    <p>Album Designing Company — creating premium wedding albums, pre-wedding designs, photo edits and cinematic videos that make your memories unforgettable.</p>
+    <div class="actions">
+      <a class="btn" href="#portfolio">View Our Work</a>
+      <a class="btn alt" href="#contact">Contact STARDESK</a>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-head"><div class="kicker">What We Do</div><h2>Creative Services</h2><p>Professional design and editing for photographers, studios, couples and families.</p></div>
+    <div class="grid">
+      <div class="card"><div class="icon">✦</div><h3>Wedding Album Design</h3><p>Luxury Bengali and Indian wedding album layouts, DM pages, covers and premium masking designs.</p></div>
+      <div class="card"><div class="icon">♡</div><h3>Pre-Wedding Albums</h3><p>Romantic, cinematic and modern pre-wedding album pages designed around your photos.</p></div>
+      <div class="card"><div class="icon">▶</div><h3>Video Editing</h3><p>Wedding, pre-wedding, reels and cinematic highlight videos with polished professional editing.</p></div>
+      <div class="card"><div class="icon">✧</div><h3>Photo Retouching</h3><p>Professional skin retouching, color correction, restoration and creative photo enhancement.</p></div>
+      <div class="card"><div class="icon">▣</div><h3>Custom Templates</h3><p>Photoshop manually album templates tailored to your studio's workflow and style.</p></div>
+      <div class="card"><div class="icon">★</div><h3>Creative Design</h3><p>Premium covers, social media creatives, promotional designs and branded visual content.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio" class="about">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Selected Work</div><h2>Our Design Style</h2><p>Replace these sample cards with your real album images whenever you are ready.</p></div>
+    <div class="portfolio">
+      <div class="work"><span>Royal Wedding</span></div>
+      <div class="work"><span>Pre-Wedding</span></div>
+      <div class="work"><span>Luxury Album</span></div>
+      <div class="work"><span>Bengali Wedding</span></div>
+      <div class="work"><span>Engagement</span></div>
+      <div class="work"><span>Rice Ceremony</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container aboutbox">
+    <div>
+      <div class="kicker">About STARDESK</div>
+      <h2>Turning photographs into beautiful stories.</h2>
+      <p>STARDESK is a creative album design company focused on elegant, emotional and premium visual storytelling.</p>
+      <p>From a single photo to a complete wedding album, we combine modern masking, cinematic composition, luxury typography and careful retouching to create designs that photographers can proudly deliver to their clients.</p>
+      <a class="btn" href="#contact">Start a Project</a>
+    </div>
+    <div class="features">
+      <div class="feature"><b>✓ Print-ready designs</b><br>High-resolution album layouts prepared for professional printing.</div>
+      <div class="feature"><b>✓ Fast & creative workflow</b><br>Designed for photographers and studios who need reliable turnaround.</div>
+      <div class="feature"><b>✓ Custom style</b><br>Tell us your theme, colors and photo count — we build around your vision.</div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container contactbox">
+    <div class="kicker">Let's Create</div>
+    <h2>Have a project in mind?</h2>
+    <p>Send your album and get a custom quote from STARDESK.</p>
+    <div class="actions">
+      <!-- Replace the email below with your real business email -->
+      <a class="btn" href="mailto:stardeskalbumdesign@gmail.com?subject=STARDESK%20Project%20Enquiry">Email Us</a>
+      <!-- Replace the number below with your WhatsApp number, including country code -->
+      <a class="btn alt" href="https://wa.me/6009295378" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <p style="margin-top:22px">Agartala, West Tripura · India</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  © 2026 STARDESK · Album Design Company · All Rights Reserved
+</footer>
+</body>
+</html>
